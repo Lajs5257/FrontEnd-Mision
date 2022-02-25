@@ -1,5 +1,5 @@
 
-# Practicas Resultas de la Intro a Frontend
+# Practicas Resueltas de la Intro a Frontend
 
 Para las practicas de esta estapa se tuvo el siguiente caso y a raiz de eso sacar los puntos mencionados abajo.
 
