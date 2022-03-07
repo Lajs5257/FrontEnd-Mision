@@ -4,6 +4,7 @@ const listapastels = document.querySelector('#lista-pasteles');
 const contenedorCarrito = document.querySelector('#lista-carrito tbody');
 const btnVaciarCarrito = document.querySelector('#vaciar-carrito');
 const btnPagarCarrito = document.querySelector('#pagar-carrito')||document.querySelector('#pagar');
+const btnPagar = document.querySelector('#pagar');
 let articulosCarrito = [];
 
 
@@ -31,6 +32,8 @@ function cargarEventListener(){
         // articulosCarrito = []; // Reiniciamos el arreglo
          sincronizarStorage(); //Volvemos a actualizar el storage
     })
+    //Boton pagar
+    btnPagar.addEventListener('click', eliminarpastel);
 
 }
 
@@ -41,6 +44,7 @@ function agregarpastel(e){
     if(e.target.classList.contains('agregar-carrito')) {
         const pastelSeleccionado = e.target.parentElement.parentElement;
         obtenDatospastel(pastelSeleccionado);
+        alert(`Se agrego correctamente el pastel ${pastelSeleccionado.querySelector('h4').textContent}`);
     }
 }
 
