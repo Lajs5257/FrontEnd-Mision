@@ -33,7 +33,12 @@ function cargarEventListener(){
          sincronizarStorage(); //Volvemos a actualizar el storage
     })
     //Boton pagar
-    btnPagar.addEventListener('click', eliminarpastel);
+    btnPagar.addEventListener('click', () => {
+        limpiarCarrito(); //Quitamos el HTML
+        articulosCarrito = []; // Reiniciamos el arreglo
+        sincronizarStorage(); //Volvemos a actualizar el storage
+        alert(`Gracias por comprar con nosotros`);
+    })
 
 }
 
